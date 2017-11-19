@@ -17,12 +17,10 @@ class SplashViewController: UIViewController {
     
     @IBOutlet weak var spMessages: LTMorphingLabel!
     var snowingLogo: UIImageView = {
-        
         let logo = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         logo.image = #imageLiteral(resourceName: "if_snow-2_110818")
         
         return logo
-        
     }()
     
     // MARK : - Properties
@@ -40,37 +38,29 @@ class SplashViewController: UIViewController {
         setConstraintsLogo()
         
         snowingLogo.center.x -= self.view.center.x
-        
-        
+
         UIView.animate(withDuration: 3) {
             self.snowingLogo.center.x += self.view.center.x
-            
             self.snowingLogo.alpha = 0
         }
-        
-        
+
         ltFallingMessageEvent()
-        
     }
     
     
     // 로고 제약조건 함수
     func setConstraintsLogo(){
-        
         snowingLogo.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview()
             make.width.equalTo(self.view.frame.width / 3)
             make.height.equalTo(self.view.frame.height / 4)
-            
         }
-        
     }
     
     // LT 메세지 스플래시 효과
     
     func ltFallingMessageEvent(){
-        
         var i = 0
         
         self.spMessages.morphingEffect = .fall
@@ -85,7 +75,6 @@ class SplashViewController: UIViewController {
                     self.spMessages.text = self.textArray[i]
                     i += 1
                 }
-                
             }else{
                 self.timer.invalidate()
                 self.spMessages.text = ""
@@ -93,15 +82,9 @@ class SplashViewController: UIViewController {
             }
         }
     }
-    
-    
+
     // 스플래시 화면 스킵하기
     @IBAction func skipBtnTapped(_ sender: UIButton){
-        
         self.performSegue(withIdentifier: self.LOGIN_SEGUE, sender: nil)
-        
     }
-
-    
-
 }
