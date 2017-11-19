@@ -47,6 +47,9 @@ extension Date{
         return formatter.string(from: Date(timeInterval: seconds, since: today))
     }
     
+    /**
+    Date 객체가 속한 날의 자정시점의 Date객체
+    */
     var midnight:Date{
         get{
             return Calendar.current.date(bySetting: .hour, value: 0, of: self)!
