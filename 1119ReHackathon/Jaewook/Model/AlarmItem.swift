@@ -19,7 +19,7 @@ struct AlarmItem: Codable {
     /// 스누즈 할 양(단위: 초)
     var snoozeAmount:Int = 15*60
     /// 이 알람이 울려야 할 날들 : [월,화,수,목,금,토,일] 중 복수선택
-    var repeatDays:[Days] = [.Mon,.Tue,.Wed,.Thu,.Fri]
+    var repeatDays:[Day] = [.Mon,.Tue,.Wed,.Thu,.Fri]
     
     var repeatDaysString: String {
         

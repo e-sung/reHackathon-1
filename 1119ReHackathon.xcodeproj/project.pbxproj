@@ -14,7 +14,7 @@
 		6CEE8E5F1FC15D320096935F /* tableStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CEE8E5E1FC15D320096935F /* tableStoryboard.storyboard */; };
 		6CEE8E611FC15D530096935F /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE8E601FC15D530096935F /* SplashViewController.swift */; };
 		6CEE8E641FC15F4E0096935F /* AlarmItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE8E631FC15F4E0096935F /* AlarmItem.swift */; };
-		6CEE8E661FC15FEA0096935F /* Days.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE8E651FC15FEA0096935F /* Days.swift */; };
+		6CEE8E661FC15FEA0096935F /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE8E651FC15FEA0096935F /* Day.swift */; };
 		6CEE8E6A1FC160340096935F /* DataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE8E691FC160340096935F /* DataCenter.swift */; };
 		6CEE8E6C1FC161ED0096935F /* AlarmInfomation.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6CEE8E6B1FC161ED0096935F /* AlarmInfomation.plist */; };
 		6CEE8E6E1FC1661C0096935F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE8E6D1FC1661C0096935F /* LoginViewController.swift */; };
@@ -36,6 +36,7 @@
 		6CEE8E8F1FC18F700096935F /* WakeUpTimeSetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE8E8B1FC18F700096935F /* WakeUpTimeSetUpViewController.swift */; };
 		6CEE8E931FC18F8B0096935F /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE8E911FC18F8B0096935F /* Date.swift */; };
 		6CEE8E941FC18F8B0096935F /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE8E921FC18F8B0096935F /* UIViewController.swift */; };
+		6CEE8E961FC197ED0096935F /* RepeatDaysSetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE8E951FC197ED0096935F /* RepeatDaysSetUpViewController.swift */; };
 		F7CF453B0FDBD72417B2D5B6 /* Pods_1119ReHackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5816AA56EAA2BD47B0C3ECFA /* Pods_1119ReHackathon.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,7 +53,7 @@
 		6CEE8E5E1FC15D320096935F /* tableStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = tableStoryboard.storyboard; sourceTree = "<group>"; };
 		6CEE8E601FC15D530096935F /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		6CEE8E631FC15F4E0096935F /* AlarmItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmItem.swift; sourceTree = "<group>"; };
-		6CEE8E651FC15FEA0096935F /* Days.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Days.swift; sourceTree = "<group>"; };
+		6CEE8E651FC15FEA0096935F /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		6CEE8E691FC160340096935F /* DataCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCenter.swift; sourceTree = "<group>"; };
 		6CEE8E6B1FC161ED0096935F /* AlarmInfomation.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AlarmInfomation.plist; sourceTree = "<group>"; };
 		6CEE8E6D1FC1661C0096935F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +75,7 @@
 		6CEE8E8B1FC18F700096935F /* WakeUpTimeSetUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WakeUpTimeSetUpViewController.swift; sourceTree = "<group>"; };
 		6CEE8E911FC18F8B0096935F /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		6CEE8E921FC18F8B0096935F /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		6CEE8E951FC197ED0096935F /* RepeatDaysSetUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepeatDaysSetUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				6CEE8E891FC18F700096935F /* SetUpViewController.swift */,
 				6CEE8E8A1FC18F700096935F /* SliderSettingCell.swift */,
 				6CEE8E8B1FC18F700096935F /* WakeUpTimeSetUpViewController.swift */,
+				6CEE8E951FC197ED0096935F /* RepeatDaysSetUpViewController.swift */,
 				6CEE8E861FC18F610096935F /* Setting.storyboard */,
 			);
 			path = Sungdoo;
@@ -169,7 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				6CEE8E631FC15F4E0096935F /* AlarmItem.swift */,
-				6CEE8E651FC15FEA0096935F /* Days.swift */,
+				6CEE8E651FC15FEA0096935F /* Day.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CEE8E961FC197ED0096935F /* RepeatDaysSetUpViewController.swift in Sources */,
 				6CEE8E6E1FC1661C0096935F /* LoginViewController.swift in Sources */,
 				6CEE8E641FC15F4E0096935F /* AlarmItem.swift in Sources */,
 				6CEE8E8C1FC18F700096935F /* SetUpNavigationViewController.swift in Sources */,
@@ -360,7 +364,7 @@
 				6CEE8E8E1FC18F700096935F /* SliderSettingCell.swift in Sources */,
 				6CEE8E6A1FC160340096935F /* DataCenter.swift in Sources */,
 				6CEE8E931FC18F8B0096935F /* Date.swift in Sources */,
-				6CEE8E661FC15FEA0096935F /* Days.swift in Sources */,
+				6CEE8E661FC15FEA0096935F /* Day.swift in Sources */,
 				6CEE8E8F1FC18F700096935F /* WakeUpTimeSetUpViewController.swift in Sources */,
 				6CEE8E8D1FC18F700096935F /* SetUpViewController.swift in Sources */,
 				6CEE8E611FC15D530096935F /* SplashViewController.swift in Sources */,

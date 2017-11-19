@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Days: Int, Codable{
+enum Day: Int, Codable{
     
     case Sun = 1
     case Mon = 2

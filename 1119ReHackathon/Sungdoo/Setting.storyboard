@@ -191,10 +191,10 @@
             </objects>
             <point key="canvasLocation" x="900" y="-341"/>
         </scene>
-        <!--Repeat Setting View Controller-->
+        <!--Repeat Day Set Up View Controller-->
         <scene sceneID="4mP-GX-5F0">
             <objects>
-                <viewController storyboardIdentifier="RepeatSetting" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RzG-3f-hOb" customClass="RepeatSettingViewController" customModule="_119ReHackathon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RepeatSetting" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RzG-3f-hOb" customClass="RepeatDaySetUpViewController" customModule="_119ReHackathon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6P5-rt-TMA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
