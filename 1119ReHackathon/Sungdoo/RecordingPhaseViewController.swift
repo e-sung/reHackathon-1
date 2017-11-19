@@ -40,30 +40,13 @@ class RecordingPhaseViewController: UIViewController {
         }
     }
     
-    //    // MARK: 수면그래프 작성을 위한, 가속도 센서 관련 전역변수들
-    //    /// 가속도 센서 확인할 주기 (단위 :Hz)
-    //    private let motionSensingRate = 10.0
-    //    ///  motionSensingRate 마다 불리는 타이머
-    //    private var motionSensorTimer:Timer!
-    //    /// motion을 할 sensing 할 객체
-    //    private let motionManager:CMMotionManager = CMMotionManager()
-    //    /// 그래프를 새로 그릴 주기 (단위 :초)
-    //    private let chartRefreshRate = 1
-    //    /// 핸드폰이 흔들렸는지 확인할 기준치 : `func startAccelerometers()`참고
-    //    private var lastState = 0
-    //    /// 1초동안 핸드폰이 흔들린 횟수 (sleep movements in seconds)
-    //    private var smInSeconds = 0
-    //    /// 이 데이터를 바탕으로 수면그래프를 그림
-    //    private var sleepData:[Float] = [0.0]
-    
     // MARK: IBOutlets
     /// 현재 시간을 표시할 UILabel
     @IBOutlet private weak var currentTimeLB: UILabel!
     /// 일어날 때 까지 남은 시간을 표시할 UILabel
     @IBOutlet private weak var remainingTimeLB: UILabel!
     /// 뒤척임 기록을 보여주는 차트
-    //@IBOutlet private weak var chart: Chart!
-    
+
     // MARK: IBActions
     /// 수면기록을 중단하고, 이전 화면으로 돌아가는 버튼
     @IBAction private func cancelButtonHandler(_ sender: UIButton) {
@@ -112,12 +95,6 @@ class RecordingPhaseViewController: UIViewController {
             self.currentTimeLB.text = Date.format(seconds: Date().absoluteSeconds, with: Date.mainDateFormat)
             self.remainingTimeLB.text = Date.format(seconds: self.remainingTimeInSeconds, with: Date.mainDateFormat)
             
-            // 그래프 새로 그리기
-            //            if remainingTime%self.chartRefreshRate == 0 {
-            //                self.reDrawChart() //차트를 새로 그리고
-            //                self.smInSeconds = 0 //smInSeconds(SleepMovementsInSeconds) 를 초기화
-            //            }
-            
             //전기장판 켜기
             if self.remainingTimeInSeconds == self.alarmItem.timeToHeat{
                 URLSession.shared.dataTask(with: URL(string: "http://192.168.0.20:3030")!).resume()
@@ -131,37 +108,6 @@ class RecordingPhaseViewController: UIViewController {
         }
     }
     
-    // MARK: 매 1/10초마다 해야 할 일 aka 가속도센서감지
-    /**
-     가속도 센서를 통해, 뒤척임을 감지합니다.
-     
-     1. 현시점의 핸드폰 상태 = x축값 + y축값 + z축값
-     2. 이 값을 "과거의 핸드폰 상태"와 비교
-     3. 비교 결과, 핸드폰이 움직였다고 한다면, 움직임을 smInSeconds(SleepMotionInSeconds)에 기록
-     4. 현시점의 핸드폰상태를 "과거의 핸드폰 상태" 변수에 저장.
-     5. 반복
-     */
-    //    private func startAccelerometers() {
-    //        // Make sure the accelerometer hardware is available.
-    //        if self.motionManager.isAccelerometerAvailable {
-    //            self.motionManager.accelerometerUpdateInterval = 1.0 / self.motionSensingRate
-    //            self.motionManager.startAccelerometerUpdates()
-    //
-    //            // Configure a timer to fetch the data.
-    //            self.motionSensorTimer = Timer(fire: Date(), interval: (1.0/self.motionSensingRate), repeats: true,
-    //                block: { (timer) in
-    //                // Get the accelerometer data.
-    //                if let data = self.motionManager.accelerometerData {
-    //                    let x = data.acceleration.x;let y = data.acceleration.y;let z = data.acceleration.z
-    //                    let currentState = Int(abs((x + y + z)*10)) // 왜 저는 정수가 아니면 뭔가 안심이 안 되는 걸까요...
-    //                    if (currentState - self.lastState) != 0 {
-    //                        self.smInSeconds += 1
-    //                    }
-    //                    self.lastState = currentState
-    //                }
-    //            })
-    //            RunLoop.current.add(self.motionSensorTimer!, forMode: .defaultRunLoopMode)
-    //        }
     // MARK: 편의상 만든 함수들
     private func clarify(_ wakeUpSeconds:TimeInterval)->TimeInterval{
         if Date().absoluteSeconds > wakeUpSeconds{
@@ -170,21 +116,6 @@ class RecordingPhaseViewController: UIViewController {
             return wakeUpSeconds //오늘 자고 오늘 일어나는 경우
         }
     }
-    
-    
-    /**
-     그래프 갱신하는 함수
-     사실 실제로 하는 일은 Chart객체에 새 데이터를 집어넣는 것 뿐.
-     - ToDo:
-     chart객체가 실제로 어떻게 View를 업데이트하는지 알아봐야겠다.
-     */
-    private func reDrawChart(){
-        //        self.sleepData.append(Float(self.smInSeconds))
-        //self.chart.add(ChartSeries(self.sleepData))
-    }
-
-
-
 }
 
 
