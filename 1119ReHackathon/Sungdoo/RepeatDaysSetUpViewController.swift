@@ -19,13 +19,7 @@ class RepeatDaySetUpViewController: UIViewController{
             return buttonsToReturn
         }
     }
-    private var originalRepeatingDays:[Day]{
-        get{
-            let navControllerVC = navigationController as! SetUpNavigationViewController
-            let alarmItem = DataCenter.main.alarmItems[navControllerVC.indexOfAlarmToSetUp]
-            return alarmItem.repeatDays
-        }
-    }
+    var originalRepeatingDays:[Day]!
     private var newRepeatingDays:[Day]{
         get{
             var daysToReturn:[Day] = []
@@ -38,9 +32,9 @@ class RepeatDaySetUpViewController: UIViewController{
         }
     }
 
-    @IBAction func confirmButtonHandler(_ sender: UIBarButtonItem) {
-        performSegue(withIdentifier: "unwindRepeatDaysSetup", sender: self)
-    }
+  //  @IBAction func confirmButtonHandler(_ sender: UIBarButtonItem) {
+  //      performSegue(withIdentifier: "unwindRepeatDaysSetup", sender: self)
+  //  }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let nextVC = segue.destination as! SetUpViewController

@@ -41,10 +41,10 @@ extension Date{
      - ToDo :
      seconds를 Double로 만들어야 함
      */
-    static func format(seconds:Int, with dateFormat:String)->String{
+    static func format(seconds:TimeInterval, with dateFormat:String)->String{
         let formatter = DateFormatter(); formatter.dateFormat = dateFormat
         let today = Calendar.current.date(bySettingHour: 0, minute: 0, second: 0, of: Date())!
-        return formatter.string(from: Date(timeInterval: Double(seconds), since: today))
+        return formatter.string(from: Date(timeInterval: seconds, since: today))
     }
     
     var midnight:Date{

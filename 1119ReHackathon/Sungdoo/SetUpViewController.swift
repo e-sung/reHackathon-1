@@ -19,7 +19,23 @@ class SetUpViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction private func confirmButotnHandler(_ sender: UIBarButtonItem){
-        DataCenter.main.alarmInfoList[navControllerVC.indexOfAlarmToSetUp] = self.alarmItem
+        
+        
+        var allData = NSArray(contentsOfFile: DataCenter.main.documentPath) as! [Any]
+        
+        let encoder = PropertyListEncoder()
+        
+        let revisedData = try! encoder.encode(alarmItem)
+        
+        allData[navControllerVC.indexOfAlarmToSetUp] = revisedData
+        
+        NSArray(array: allData).write(toFile: DataCenter.main.documentPath, atomically: true)
+        
+       
+        
+        
+        
+        // DataCenter.main.alarmInfoList[navControllerVC.indexOfAlarmToSetUp] = self.alarmItem
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -103,17 +119,22 @@ extension SetUpViewController{
         if let vc = segue.destination as? WakeUpTimeSetUpViewController{
             vc.view.heroID = "selected"
             vc.timeValue = alarmItem.timeToWakeUp
+        }else if let vc = segue.destination as? RepeatDaySetUpViewController{
+            vc.originalRepeatingDays = alarmItem.repeatDays
         }
     }
 }
 
 extension SetUpViewController:SliderSettingCellDelegate{
-    func didSliderValueChanged(_ changer: String, _ changedValue: Int) {
+    func didSliderValueChanged(_ changer: String, _ changedValue: TimeInterval) {
         if changer == "스누즈 설정"{
-            self.alarmItem.snoozeAmount = changedValue*60
+            self.alarmItem.snoozeAmount = changedValue*60.0
         }else{
-            self.alarmItem.timeToHeat = changedValue*60
+            self.alarmItem.timeToHeat = changedValue*60.0
         }
     }
+        
+    
+    
 }
 

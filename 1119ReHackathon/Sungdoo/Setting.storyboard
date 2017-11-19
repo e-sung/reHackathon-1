@@ -100,10 +100,10 @@
                                 <rect key="frame" x="329" y="7" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="확인"/>
+                                <connections>
+                                    <action selector="confirmButotnHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F0l-b5-yPf"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <action selector="confirmButotnHandler:" destination="BYZ-38-t0r" id="YiA-Tq-yBp"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -212,17 +212,151 @@
                                     <constraint firstAttribute="height" constant="70" id="vYG-qd-pmu"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="if_icon-ios7-arrow-back_211686"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PMD-K1-9Vy">
+                                <rect key="frame" x="0.0" y="288.5" width="375" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2W-27-gAN">
+                                        <rect key="frame" x="0.0" y="0.0" width="53.5" height="110"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="일">
+                                            <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sundayToggle:" destination="RzG-3f-hOb" eventType="touchUpInside" id="Xe8-qP-9bv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pj3-vI-bH8">
+                                        <rect key="frame" x="53.5" y="0.0" width="53.5" height="110"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="월">
+                                            <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="monToggle:" destination="RzG-3f-hOb" eventType="touchUpInside" id="lSY-L1-wdt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0R-Ae-Aa8">
+                                        <rect key="frame" x="107" y="0.0" width="53.5" height="110"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="화">
+                                            <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tuesdayToggle:" destination="RzG-3f-hOb" eventType="touchUpInside" id="pJA-Nl-dRR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3aO-V4-noQ">
+                                        <rect key="frame" x="160.5" y="0.0" width="54" height="110"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="수">
+                                            <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="wedsdayToggle:" destination="RzG-3f-hOb" eventType="touchUpInside" id="KkS-td-JrO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28k-Li-Zml">
+                                        <rect key="frame" x="214.5" y="0.0" width="53.5" height="110"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="목">
+                                            <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="thirsdayToggle:" destination="RzG-3f-hOb" eventType="touchUpInside" id="iIn-E0-032"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIG-tg-9k6">
+                                        <rect key="frame" x="268" y="0.0" width="53.5" height="110"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="금">
+                                            <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="fridayToggle:" destination="RzG-3f-hOb" eventType="touchUpInside" id="EXH-mP-1oX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJt-3e-sQ0">
+                                        <rect key="frame" x="321.5" y="0.0" width="53.5" height="110"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="토">
+                                            <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saterdayToggle:" destination="RzG-3f-hOb" eventType="touchUpInside" id="FVo-mu-rqL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="Gfj-l2-5uW"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jBb-Mw-kP0">
+                                <rect key="frame" x="152" y="472" width="70" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="확인">
+                                    <color key="titleColor" red="0.33725490200000002" green="0.38431372549999998" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
-                                    <segue destination="8HZ-LA-sZl" kind="unwind" unwindAction="unwind:" id="SM4-Lw-7cQ"/>
+                                    <segue destination="8HZ-LA-sZl" kind="unwind" unwindAction="unwindToSetUpAlarmVCWithSegue:" id="hGe-Hs-Wfj"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="jBb-Mw-kP0" firstAttribute="leading" secondItem="A2K-3l-21h" secondAttribute="leading" constant="152" id="2Po-6G-dkV"/>
+                            <constraint firstItem="jBb-Mw-kP0" firstAttribute="centerX" secondItem="6P5-rt-TMA" secondAttribute="centerX" id="6kS-oi-y6Y"/>
+                            <constraint firstItem="PMD-K1-9Vy" firstAttribute="centerY" secondItem="A2K-3l-21h" secondAttribute="centerY" id="8QL-vw-JgZ"/>
                             <constraint firstItem="ubk-sn-HeZ" firstAttribute="top" secondItem="A2K-3l-21h" secondAttribute="top" constant="16" id="9RT-yO-Xuv"/>
                             <constraint firstItem="A2K-3l-21h" firstAttribute="trailing" secondItem="ubk-sn-HeZ" secondAttribute="trailing" constant="30" id="NY5-gA-qSd"/>
                             <constraint firstItem="bU1-hv-Q3w" firstAttribute="top" secondItem="A2K-3l-21h" secondAttribute="top" constant="10" id="ZfK-kC-knH"/>
+                            <constraint firstItem="PMD-K1-9Vy" firstAttribute="width" secondItem="6P5-rt-TMA" secondAttribute="width" id="a7K-Te-oGt"/>
+                            <constraint firstItem="PMD-K1-9Vy" firstAttribute="centerX" secondItem="A2K-3l-21h" secondAttribute="centerX" id="fdK-Z6-4Hd"/>
                             <constraint firstItem="bU1-hv-Q3w" firstAttribute="leading" secondItem="A2K-3l-21h" secondAttribute="leading" id="gAn-cJ-36b"/>
+                            <constraint firstItem="A2K-3l-21h" firstAttribute="bottom" secondItem="jBb-Mw-kP0" secondAttribute="bottom" constant="135" id="yPb-cZ-sQ6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="A2K-3l-21h"/>
                     </view>

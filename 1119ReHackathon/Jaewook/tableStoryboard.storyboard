@@ -85,7 +85,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="if_moon_fill_118641"/>
                                 <connections>
-                                    <segue destination="Qtp-oa-hz7" kind="presentation" id="tHk-3S-Vdg"/>
+                                    <segue destination="bam-mY-Xi6" kind="show" id="O8D-Gu-mS6"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="알람시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ol-Cj-L5t">
@@ -139,69 +139,18 @@
             </objects>
             <point key="canvasLocation" x="1212" y="-114"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="xI9-Ul-rXh">
-            <objects>
-                <viewController id="Qtp-oa-hz7" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aXD-gm-7qT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PzE-h5-aX5">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15분 남았습니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tm0-zj-dYV">
-                                        <rect key="frame" x="117.5" y="275" width="140" height="20.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="140" id="Zdr-Tx-Mzo"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_alarm_white_3x" translatesAutoresizingMaskIntoConstraints="NO" id="45D-e9-a3d">
-                                        <rect key="frame" x="151.5" y="150" width="72" height="72"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="45D-e9-a3d" firstAttribute="centerX" secondItem="PzE-h5-aX5" secondAttribute="centerX" id="ICq-WO-W0C"/>
-                                    <constraint firstItem="Tm0-zj-dYV" firstAttribute="top" secondItem="45D-e9-a3d" secondAttribute="bottom" constant="53" id="KuP-sN-Y8g"/>
-                                    <constraint firstItem="45D-e9-a3d" firstAttribute="top" secondItem="PzE-h5-aX5" secondAttribute="top" constant="150" id="L0L-Fb-sTy"/>
-                                    <constraint firstItem="Tm0-zj-dYV" firstAttribute="centerX" secondItem="PzE-h5-aX5" secondAttribute="centerX" id="Wn9-8F-A1l"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="PzE-h5-aX5" firstAttribute="trailing" secondItem="WkR-1a-A1T" secondAttribute="trailing" id="b1Z-sf-DW9"/>
-                            <constraint firstItem="PzE-h5-aX5" firstAttribute="top" secondItem="aXD-gm-7qT" secondAttribute="top" id="nMH-Dw-847"/>
-                            <constraint firstItem="PzE-h5-aX5" firstAttribute="leading" secondItem="WkR-1a-A1T" secondAttribute="leading" id="rg3-ep-oVO"/>
-                            <constraint firstItem="PzE-h5-aX5" firstAttribute="bottom" secondItem="WkR-1a-A1T" secondAttribute="bottom" id="tLL-Qe-DMd"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="WkR-1a-A1T"/>
-                    </view>
-                    <connections>
-                        <segue destination="bam-mY-Xi6" kind="presentation" identifier="goToFinal" id="LPM-kD-vBk"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Otv-54-tfl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1324" y="320"/>
-        </scene>
-        <!--Storyboard Reference-->
+        <!--RecordingPhase-->
         <scene sceneID="OrJ-f4-ar5">
             <objects>
-                <viewControllerPlaceholder id="bam-mY-Xi6" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="RecordingPhase" id="bam-mY-Xi6" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="myf-ae-OrL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2271" y="342"/>
+            <point key="canvasLocation" x="1966" y="341"/>
         </scene>
     </scenes>
     <resources>
         <image name="ic_add_circle_outline_2x" width="48" height="48"/>
         <image name="ic_alarm_white" width="24" height="24"/>
-        <image name="ic_alarm_white_3x" width="72" height="72"/>
         <image name="if_moon_fill_118641" width="128" height="128"/>
     </resources>
 </document>

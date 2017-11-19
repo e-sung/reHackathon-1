@@ -25,7 +25,7 @@ class SliderSettingCell: UITableViewCell{
         }
         set(newVal){
             slider.value = newVal!
-            quantityLB.text = "\(Int(newVal!))"
+            quantityLB.text = "\(newVal!)"
         }
     }
     @IBOutlet private weak var titleLB:UILabel!
@@ -34,7 +34,7 @@ class SliderSettingCell: UITableViewCell{
     
     @IBAction private func updateQuantity(_ sender:UISlider){
         quantityLB.text = "\(Int(sender.value))"
-        delegate.didSliderValueChanged(titleLB.text!, Int(sender.value))
+        delegate.didSliderValueChanged(titleLB.text!, (TimeInterval(sender.value)))
     }
 
     override func awakeFromNib() {
@@ -44,5 +44,5 @@ class SliderSettingCell: UITableViewCell{
 }
 
 protocol SliderSettingCellDelegate {
-    func didSliderValueChanged(_ changer:String, _ changedValue:Int)
+    func didSliderValueChanged(_ changer:String, _ changedValue:TimeInterval)
 }

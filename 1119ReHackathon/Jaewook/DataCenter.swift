@@ -79,5 +79,28 @@ class DataCenter{
             self.alarmInfoList = alarmData
         }
     }
+    
+    var nearestAlarm:AlarmItem?{
+        get{
+            let today = Day(rawValue:Calendar.current.component(.weekday, from: Date()))!
+            let tomorrow = Day(rawValue:Calendar.current.component(.weekday, from:
+                Date(timeInterval: 24*60*60, since: Date())))!
+            
+            for item in AlarmItem.availableAlarms(on: today, given: alarmInfoList){
+                if item.timeToWakeUp > Date().absoluteSeconds{
+                    return item
+                }
+            }
+            let alarmsOfTomorrow = AlarmItem.availableAlarms(on: tomorrow, given: alarmInfoList)
+            if alarmsOfTomorrow.count > 0 {
+                return alarmsOfTomorrow[0]
+            }else{
+                return nil
+            }
+        }
+    }
+    
+    
+    
 
 }

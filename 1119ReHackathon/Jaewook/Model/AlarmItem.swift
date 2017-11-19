@@ -13,11 +13,11 @@ struct AlarmItem: Codable {
     /// 다음 알람시간까지의 초
     var timeToWakeUp: TimeInterval = 0
     /// 전기장판 킬 시간(단위 : 초)
-    var timeToHeat:Int = 30*60
+    var timeToHeat:TimeInterval = 30.0*60.0
     /// 활성화 여부 : 메인화면에서, 스위치를 토글함으로써 변경.
     var isActive:Bool = true
     /// 스누즈 할 양(단위: 초)
-    var snoozeAmount:Int = 15*60
+    var snoozeAmount:TimeInterval = 15.0*60.0
     /// 이 알람이 울려야 할 날들 : [월,화,수,목,금,토,일] 중 복수선택
     var repeatDays:[Day] = [.Mon,.Tue,.Wed,.Thu,.Fri]
     
@@ -52,6 +52,23 @@ struct AlarmItem: Codable {
         
         return daysString
     
+    }
+    
+    static func availableAlarms(on day:Day, given alarms:[AlarmItem], sorted:Bool = true)->[AlarmItem]{
+        var alarmsToReturn:[AlarmItem] = []
+        for item in alarms{
+            if item.repeatDays.contains(day){
+                alarmsToReturn.append(item)
+            }
+        }
+        if sorted == true {
+            alarmsToReturn.sort { (item1 , item2) -> Bool in
+                let wt1 = item1.timeToWakeUp
+                let wt2 = item2.timeToWakeUp
+                return wt1 < wt2
+            }
+        }
+        return alarmsToReturn
     }
     
 }

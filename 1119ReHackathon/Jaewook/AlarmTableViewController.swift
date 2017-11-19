@@ -38,12 +38,7 @@ class AlarmTableViewController: UIViewController {
     
     @IBAction func minusBtnTapped(_ sender: UIButton) {
         
-        DataCenter.main.loadData()
-        self.cellDatas = DataCenter.main.alarmInfoList
-        
-        print(cellDatas.count)
-        
-        tableView.reloadData()
+        tableView.isEditing = !tableView.isEditing
         
         
     }
@@ -121,9 +116,9 @@ extension AlarmTableViewController: UITableViewDelegate, UITableViewDataSource{
         
         
         
+       
         
-        
-        cell.alarmTime.text = ""
+        cell.alarmTime.text = Date.format(seconds: celldata.timeToWakeUp, with: "HH:mm:ss")
         cell.alarmDays.text = celldata.repeatDaysString
         
         
@@ -148,7 +143,18 @@ extension AlarmTableViewController: UITableViewDelegate, UITableViewDataSource{
 //        let selectedCell = tableView.cellForRow(at: indexPath) as! JWCustomCell
 //        selectedCell
         
-        performSegue(withIdentifier: GOTOSETTING, sender: nil)
+        performSegue(withIdentifier: GOTOSETTING, sender: indexPath.item)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let nextVC = segue.destination as? RecordingPhaseViewController {
+            nextVC.alarmItem = DataCenter.main.nearestAlarm
+        }
+        print(sender as? Int)
+        if let nextVC = segue.destination as? SetUpNavigationViewController {
+            nextVC.indexOfAlarmToSetUp = sender as! Int
+        }
     }
 }
 
