@@ -28,6 +28,7 @@ class SliderSettingCell: UITableViewCell{
             quantityLB.text = "\(newVal!)"
         }
     }
+    
     @IBOutlet private weak var titleLB:UILabel!
     @IBOutlet private weak var quantityLB:UILabel!
     @IBOutlet private weak var slider:UISlider!

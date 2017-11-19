@@ -19,23 +19,12 @@ class SetUpViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction private func confirmButotnHandler(_ sender: UIBarButtonItem){
-        
-        
         var allData = NSArray(contentsOfFile: DataCenter.main.documentPath) as! [Any]
-        
         let encoder = PropertyListEncoder()
-        
         let revisedData = try! encoder.encode(alarmItem)
-        
         allData[navControllerVC.indexOfAlarmToSetUp] = revisedData
-        
         NSArray(array: allData).write(toFile: DataCenter.main.documentPath, atomically: true)
         
-       
-        
-        
-        
-        // DataCenter.main.alarmInfoList[navControllerVC.indexOfAlarmToSetUp] = self.alarmItem
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -133,8 +122,5 @@ extension SetUpViewController:SliderSettingCellDelegate{
             self.alarmItem.timeToHeat = changedValue*60.0
         }
     }
-        
-    
-    
 }
 

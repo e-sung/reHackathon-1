@@ -10,6 +10,7 @@ import UIKit
 
 class RepeatDaySetUpViewController: UIViewController{
     
+    var originalRepeatingDays:[Day]!
     private var dayButtons:[UIButton]{
         get{
             var buttonsToReturn:[UIButton] = []
@@ -19,7 +20,6 @@ class RepeatDaySetUpViewController: UIViewController{
             return buttonsToReturn
         }
     }
-    var originalRepeatingDays:[Day]!
     private var newRepeatingDays:[Day]{
         get{
             var daysToReturn:[Day] = []
@@ -32,39 +32,35 @@ class RepeatDaySetUpViewController: UIViewController{
         }
     }
 
-  //  @IBAction func confirmButtonHandler(_ sender: UIBarButtonItem) {
-  //      performSegue(withIdentifier: "unwindRepeatDaysSetup", sender: self)
-  //  }
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let nextVC = segue.destination as! SetUpViewController
         nextVC.alarmItem.repeatDays = newRepeatingDays
     }
     
-    @IBAction func monToggle(_ sender:UIButton){
+    private @IBAction func monToggle(_ sender:UIButton){
         sender.toggle()
     }
 
-    @IBAction func tuesdayToggle(_ sender:UIButton){
+    private @IBAction func tuesdayToggle(_ sender:UIButton){
         sender.toggle()
     }
-    @IBAction func wedsdayToggle(_ sender:UIButton){
+    private @IBAction func wedsdayToggle(_ sender:UIButton){
         sender.toggle()
     }
-    @IBAction func thirsdayToggle(_ sender:UIButton){
+    private @IBAction func thirsdayToggle(_ sender:UIButton){
         sender.toggle()
     }
-    @IBAction func fridayToggle(_ sender:UIButton){
+    private @IBAction func fridayToggle(_ sender:UIButton){
         sender.toggle()
     }
-    @IBAction func saterdayToggle(_ sender:UIButton){
+    private @IBAction func saterdayToggle(_ sender:UIButton){
         sender.toggle()
     }
-    @IBAction func sundayToggle(_ sender:UIButton){
+    private @IBAction func sundayToggle(_ sender:UIButton){
         sender.toggle()
     }
     
-    @IBAction func mondayToggle(_ sender:UIButton){
+    private @IBAction func mondayToggle(_ sender:UIButton){
         sender.toggle()
     }
 
@@ -82,6 +78,7 @@ class RepeatDaySetUpViewController: UIViewController{
     }
 }
 
+/// 자신의 isSelected 여부를 토글
 extension UIButton{
     func toggle(){
         if self.isSelected{
