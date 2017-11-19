@@ -41,6 +41,8 @@
 		6CEE8E9C1FC1A0890096935F /* RingingPhaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE8E9B1FC1A0890096935F /* RingingPhaseViewController.swift */; };
 		6CEE8E9E1FC1A0950096935F /* RecordingPhaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE8E9D1FC1A0950096935F /* RecordingPhaseViewController.swift */; };
 		6CEE8EA01FC1A60A0096935F /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6CEE8E9F1FC1A60A0096935F /* alarm.mp3 */; };
+		6CEE8EA51FC1A8020096935F /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE8EA41FC1A8020096935F /* SWRevealViewController.m */; };
+		6CEE8EA71FC1A8F60096935F /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE8EA61FC1A8F60096935F /* MenuVC.swift */; };
 		F7CF453B0FDBD72417B2D5B6 /* Pods_1119ReHackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5816AA56EAA2BD47B0C3ECFA /* Pods_1119ReHackathon.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +86,10 @@
 		6CEE8E9B1FC1A0890096935F /* RingingPhaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RingingPhaseViewController.swift; sourceTree = "<group>"; };
 		6CEE8E9D1FC1A0950096935F /* RecordingPhaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingPhaseViewController.swift; sourceTree = "<group>"; };
 		6CEE8E9F1FC1A60A0096935F /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
+		6CEE8EA21FC1A7F50096935F /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		6CEE8EA31FC1A8010096935F /* 1119ReHackathon-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "1119ReHackathon-Bridging-Header.h"; sourceTree = "<group>"; };
+		6CEE8EA41FC1A8020096935F /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		6CEE8EA61FC1A8F60096935F /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +181,8 @@
 		6CEE8E5B1FC15AED0096935F /* Kyuhan */ = {
 			isa = PBXGroup;
 			children = (
+				6CEE8EA61FC1A8F60096935F /* MenuVC.swift */,
+				6CEE8EA11FC1A7D70096935F /* SupportingFiles */,
 				6CEE8E6F1FC166FE0096935F /* Storyboard.storyboard */,
 			);
 			path = Kyuhan;
@@ -196,6 +204,16 @@
 				6CEE8E921FC18F8B0096935F /* UIViewController.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6CEE8EA11FC1A7D70096935F /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				6CEE8EA21FC1A7F50096935F /* SWRevealViewController.h */,
+				6CEE8EA41FC1A8020096935F /* SWRevealViewController.m */,
+				6CEE8EA31FC1A8010096935F /* 1119ReHackathon-Bridging-Header.h */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		C718A703A94A03737A2E0B92 /* Pods */ = {
@@ -256,6 +274,7 @@
 				TargetAttributes = {
 					6CEE8E431FC15A100096935F = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -329,6 +348,7 @@
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${BUILT_PRODUCTS_DIR}/LTMorphingLabel/LTMorphingLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -338,6 +358,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LTMorphingLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,6 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CEE8E961FC197ED0096935F /* RepeatDaysSetUpViewController.swift in Sources */,
+				6CEE8EA51FC1A8020096935F /* SWRevealViewController.m in Sources */,
 				6CEE8E9C1FC1A0890096935F /* RingingPhaseViewController.swift in Sources */,
 				6CEE8E6E1FC1661C0096935F /* LoginViewController.swift in Sources */,
 				6CEE8E641FC15F4E0096935F /* AlarmItem.swift in Sources */,
@@ -375,6 +397,7 @@
 				6CEE8E831FC16EA90096935F /* SignUpViewController.swift in Sources */,
 				6CEE8E481FC15A100096935F /* AppDelegate.swift in Sources */,
 				6CEE8E851FC16FE80096935F /* JWCustomCell.swift in Sources */,
+				6CEE8EA71FC1A8F60096935F /* MenuVC.swift in Sources */,
 				6CEE8E731FC168CD0096935F /* AlarmTableViewController.swift in Sources */,
 				6CEE8E8E1FC18F700096935F /* SliderSettingCell.swift in Sources */,
 				6CEE8E6A1FC160340096935F /* DataCenter.swift in Sources */,
@@ -514,11 +537,14 @@
 			baseConfigurationReference = 50796B9B74A7A58CFA92185D /* Pods-1119ReHackathon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = 1119ReHackathon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.swift.woookdev.-119ReHackathon";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "1119ReHackathon/Kyuhan/SupportingFiles/1119ReHackathon-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -529,11 +555,13 @@
 			baseConfigurationReference = 391A5778050EB7415818D033 /* Pods-1119ReHackathon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = 1119ReHackathon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.swift.woookdev.-119ReHackathon";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "1119ReHackathon/Kyuhan/SupportingFiles/1119ReHackathon-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

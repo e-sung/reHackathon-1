@@ -29,6 +29,11 @@ class AlarmTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        sidevarBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
+        
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
+        
         makeDeleteBtn()
        cellDatas = DataCenter.main.alarmInfoList
         

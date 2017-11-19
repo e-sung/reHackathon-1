@@ -12,4 +12,7 @@ pod 'LTMorphingLabel', '~> 0.5'
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'Firebase/Storage'
+pod 'Firebase/Database'
+  pod 'Firebase/Auth'
+
 end

@@ -80,6 +80,8 @@ class DataCenter{
         }
     }
     
+    // 가장 가까운 시간 계산
+    
     var nearestAlarm:AlarmItem?{
         get{
             let today = Day(rawValue:Calendar.current.component(.weekday, from: Date()))!
