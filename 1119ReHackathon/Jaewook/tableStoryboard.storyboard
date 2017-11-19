@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5D7-3U-0t8">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -14,7 +14,7 @@
         <!--Alarm-->
         <scene sceneID="daM-CK-gFz">
             <objects>
-                <viewController id="5D7-3U-0t8" customClass="JWTableViewController" customModule="_119ReHackathon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5D7-3U-0t8" customClass="AlarmTableViewController" customModule="_119ReHackathon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7ac-P6-Sjc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -56,14 +56,14 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.33725490196078434" green="0.38431372549019605" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <outlet property="alarmDays" destination="tns-lo-lMK" id="1S8-tZ-lNh"/>
-                                            <outlet property="alarmTime" destination="5Ve-M9-JN9" id="3rr-xT-eO6"/>
+                                            <outlet property="alarmDays" destination="tns-lo-lMK" id="9Zm-Os-2sO"/>
+                                            <outlet property="alarmTime" destination="5Ve-M9-JN9" id="99Q-3N-eYT"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="5D7-3U-0t8" id="2lD-cG-U7t"/>
-                                    <outlet property="delegate" destination="5D7-3U-0t8" id="7tk-Fi-ULm"/>
+                                    <outlet property="dataSource" destination="5D7-3U-0t8" id="wOE-fG-fxX"/>
+                                    <outlet property="delegate" destination="5D7-3U-0t8" id="UsH-yW-WDp"/>
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KaF-WD-Cyw">
@@ -74,7 +74,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="ic_add_circle_outline_2x"/>
                                 <connections>
-                                    <action selector="plusBtnTapped:" destination="5D7-3U-0t8" eventType="touchUpInside" id="w2t-02-reo"/>
+                                    <action selector="plusBtnTapped:" destination="5D7-3U-0t8" eventType="touchUpInside" id="4ry-EO-ZxT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83u-3B-Ep1">
@@ -99,7 +99,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="ic_add_circle_outline_2x"/>
                                 <connections>
-                                    <action selector="minusBtnTapped:" destination="5D7-3U-0t8" eventType="touchUpInside" id="TSI-BB-gxV"/>
+                                    <action selector="minusBtnTapped:" destination="5D7-3U-0t8" eventType="touchUpInside" id="5JF-cg-WGN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -122,14 +122,14 @@
                         <color key="badgeColor" red="0.17254901959999999" green="0.1647058824" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <connections>
-                        <outlet property="minusBtn" destination="e6D-eh-cmG" id="r0H-j8-Lfk"/>
-                        <outlet property="tableView" destination="paz-Ze-yP2" id="sPx-cM-ESj"/>
+                        <outlet property="minusBtn" destination="e6D-eh-cmG" id="Exp-l2-Jb4"/>
+                        <outlet property="tableView" destination="paz-Ze-yP2" id="s7w-Om-875"/>
                         <segue destination="94a-qu-zAt" kind="presentation" identifier="goToSetting" id="mZQ-ot-cJX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kJ8-2u-p2n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="190" y="290"/>
+            <point key="canvasLocation" x="189.59999999999999" y="289.20539730134936"/>
         </scene>
         <!--Setting-->
         <scene sceneID="GMc-XZ-zAO">
@@ -139,10 +139,10 @@
             </objects>
             <point key="canvasLocation" x="1212" y="-114"/>
         </scene>
-        <!--Timer View Controller-->
+        <!--View Controller-->
         <scene sceneID="xI9-Ul-rXh">
             <objects>
-                <viewController id="Qtp-oa-hz7" customClass="TimerViewController" customModule="_119ReHackathon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Qtp-oa-hz7" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aXD-gm-7qT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -182,7 +182,6 @@
                         <viewLayoutGuide key="safeArea" id="WkR-1a-A1T"/>
                     </view>
                     <connections>
-                        <outlet property="aLabel" destination="Tm0-zj-dYV" id="99m-Hb-nv1"/>
                         <segue destination="bam-mY-Xi6" kind="presentation" identifier="goToFinal" id="LPM-kD-vBk"/>
                     </connections>
                 </viewController>
@@ -190,10 +189,10 @@
             </objects>
             <point key="canvasLocation" x="1324" y="320"/>
         </scene>
-        <!--Final-->
+        <!--Storyboard Reference-->
         <scene sceneID="OrJ-f4-ar5">
             <objects>
-                <viewControllerPlaceholder storyboardName="Final" id="bam-mY-Xi6" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder id="bam-mY-Xi6" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="myf-ae-OrL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2271" y="342"/>

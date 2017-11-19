@@ -11,11 +11,12 @@ import Foundation
 
 class DataCenter{
     
-    
     // MARK: 싱글턴 static 변수
+    
     static var main = DataCenter()
     
     // MARK: - Properties
+    
     var alarmInfoList: [AlarmItem] = []
     
     let AlarminfoFileName = "AlarmInfomation.plist"
@@ -26,8 +27,10 @@ class DataCenter{
         return NSSearchPathForDirectoriesInDomains(.documentDirectory,
                                             .userDomainMask, true).first! + "/" + AlarminfoFileName
     }
+    
     private init(){
         copyFormFromBundle()
+        loadData()
         
     }
     
@@ -59,7 +62,7 @@ class DataCenter{
         
         guard let documentRenewedPlistURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent(AlarminfoFileName) else { return }
         
-        if let data = try? NSArray(contentsOf: documentRenewedPlistURL) {
+        if let data = NSArray(contentsOf: documentRenewedPlistURL) {
             
             
             let decoder = PropertyListDecoder()

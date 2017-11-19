@@ -12,10 +12,10 @@ import SnapKit
 
 
 class SplashViewController: UIViewController {
-
     
     // MARK : - UI
     
+    @IBOutlet weak var spMessages: LTMorphingLabel!
     var snowingLogo: UIImageView = {
         
         let logo = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
@@ -32,16 +32,24 @@ class SplashViewController: UIViewController {
     var timer = Timer()
     var textArray: [String] = ["추운 겨울을", "따뜻하게 만들어 줄", "당신을 위한 앱", "ENTER THE WINTER"]
     
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.view.addSubview(snowingLogo)
         setConstraintsLogo()
         
+        snowingLogo.center.x -= self.view.center.x
         
         
+        UIView.animate(withDuration: 3) {
+            self.snowingLogo.center.x += self.view.center.x
+            
+            self.snowingLogo.alpha = 0
+        }
+        
+        
+        ltFallingMessageEvent()
         
     }
     
@@ -57,6 +65,33 @@ class SplashViewController: UIViewController {
             
         }
         
+    }
+    
+    // LT 메세지 스플래시 효과
+    
+    func ltFallingMessageEvent(){
+        
+        var i = 0
+        
+        self.spMessages.morphingEffect = .fall
+        self.spMessages.morphingDuration = 4
+        
+        timer = Timer.scheduledTimer(withTimeInterval: 4, repeats: true){_ in
+            if i <= 3{
+                self.spMessages.text = self.textArray[i]
+                i += 1
+                if i == 3{
+                    self.spMessages.textColor = #colorLiteral(red: 0.9040181041, green: 0.1651062369, blue: 0.309209466, alpha: 1)
+                    self.spMessages.text = self.textArray[i]
+                    i += 1
+                }
+                
+            }else{
+                self.timer.invalidate()
+                self.spMessages.text = ""
+                self.performSegue(withIdentifier: self.LOGIN_SEGUE, sender: nil)
+            }
+        }
     }
     
     

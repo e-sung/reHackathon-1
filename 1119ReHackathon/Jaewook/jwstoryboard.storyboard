@@ -23,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJG-d5-4w5" customClass="LTMorphingLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJG-d5-4w5" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
                                 <rect key="frame" x="62" y="313.5" width="250" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="dEY-bW-I8U"/>
@@ -50,7 +50,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="skipBtnTapped:" destination="sXB-5n-dYr" eventType="touchUpInside" id="1EO-5M-dv8"/>
+                                    <action selector="skipBtnTapped:" destination="sXB-5n-dYr" eventType="touchUpInside" id="0ek-ME-szl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -64,7 +64,7 @@
                         <viewLayoutGuide key="safeArea" id="wW4-BW-keB"/>
                     </view>
                     <connections>
-                        <outlet property="spMessages" destination="uJG-d5-4w5" id="NNC-tW-FHZ"/>
+                        <outlet property="spMessages" destination="uJG-d5-4w5" id="QcA-At-3B9"/>
                         <segue destination="KfO-av-MyZ" kind="presentation" identifier="goToLogin" id="nrZ-tS-d72"/>
                     </connections>
                 </viewController>
@@ -72,10 +72,10 @@
             </objects>
             <point key="canvasLocation" x="-223.19999999999999" y="125.4872563718141"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--Storyboard-->
         <scene sceneID="EaV-kH-SPG">
             <objects>
-                <viewControllerPlaceholder id="KfO-av-MyZ" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Storyboard" id="KfO-av-MyZ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TX7-Au-HJU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="832" y="6"/>
