@@ -10,85 +10,52 @@ import UIKit
 
 
 class AlarmTableViewController: UIViewController {
-
     
-    
-    
-    // MARK : - UI
-    
+    // MARK : IBOutlets
     @IBOutlet weak var minusBtn: UIButton!
     @IBOutlet weak var sidevarBtn: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
-    
-    // MARK : - Properties
+    // MARK : Properties
     
     var cellDatas: [AlarmItem] = []
     let GOTOSETTING: String = "goToSetting"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         makeDeleteBtn()
-       cellDatas = DataCenter.main.alarmInfoList
-        
-
-       
+        cellDatas = DataCenter.main.alarmInfoList
     }
     
     @IBAction func minusBtnTapped(_ sender: UIButton) {
-        
         tableView.isEditing = !tableView.isEditing
-        
-        
     }
+    
     func makeDeleteBtn(){
-        
-        
-        
         self.minusBtn.transform = CGAffineTransform.init(rotationAngle: CGFloat.pi / 4 )
         self.view.layoutIfNeeded()
     }
     
     @IBAction func plusBtnTapped(_ sender: UIButton){
-        
         let data = AlarmItem()
-        
         let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] + "/AlarmInfomation.plist"
-        
-        
-        
-        print(data.isActive)
-        
+
         let encoder = PropertyListEncoder()
-        
         let encodedData = try! encoder.encode(data)
-        
         var test = NSArray(contentsOfFile: path) as! [Any]
-        //
         test.append(encodedData)
-        
-        // let test:[AlarmItem] = []
-        
         NSArray(array: test).write(toFile: path, atomically: true)
-        
-        
-        
+
         DataCenter.main.loadData()
         cellDatas = DataCenter.main.alarmInfoList
         tableView.reloadData()
-        
-        
-        
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         DataCenter.main.loadData()
         cellDatas = DataCenter.main.alarmInfoList
         tableView.reloadData()
     }
-
-    
-
 }
 
 
