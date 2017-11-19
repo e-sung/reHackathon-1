@@ -24,15 +24,11 @@ class LoginViewController: UIViewController {
             }
         }
     }
-    
-    
-    
+
     // MARK: 로그인 버튼 이벤트 구현
     
     @IBAction func loginPressed(_ sender : Any) {
-        
         if let email = emailtextField.text, email != "", let password = passwordTextField.text, password != "" {
-            
             Auth.auth().signIn(withEmail: email, password: password) { (user, err) in
                 if(err != nil){
                     let alert = UIAlertController(title: "에러",
@@ -47,7 +43,6 @@ class LoginViewController: UIViewController {
                     
                 }
             }
-            
         }
     }
 
