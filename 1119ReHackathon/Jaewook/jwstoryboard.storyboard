@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sXB-5n-dYr">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-DemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="OHt-2d-8F7">
+            <objects>
+                <viewController id="sXB-5n-dYr" customClass="SplashViewController" customModule="_119ReHackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g36-0r-dMk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJG-d5-4w5" customClass="LTMorphingLabel">
+                                <rect key="frame" x="62" y="313.5" width="250" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="dEY-bW-I8U"/>
+                                    <constraint firstAttribute="width" constant="250" id="vkD-pB-7Id"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="21"/>
+                                <color key="textColor" red="0.33725490196078434" green="0.38431372549019605" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4t-0N-pv3">
+                                <rect key="frame" x="278" y="589" width="62" height="35"/>
+                                <color key="backgroundColor" red="0.8784313725490196" green="0.8901960784313725" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="TeS-hl-VWf"/>
+                                    <constraint firstAttribute="width" constant="62" id="X4B-fr-kWT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Skip">
+                                    <color key="titleColor" red="0.33725490196078434" green="0.38431372549019605" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="skipBtnTapped:" destination="sXB-5n-dYr" eventType="touchUpInside" id="1EO-5M-dv8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="uJG-d5-4w5" firstAttribute="centerY" secondItem="g36-0r-dMk" secondAttribute="centerY" id="68E-wa-N2S"/>
+                            <constraint firstItem="wW4-BW-keB" firstAttribute="bottom" secondItem="Q4t-0N-pv3" secondAttribute="bottom" constant="43" id="VaZ-fB-tx1"/>
+                            <constraint firstItem="uJG-d5-4w5" firstAttribute="centerX" secondItem="g36-0r-dMk" secondAttribute="centerX" id="uOE-yg-yJU"/>
+                            <constraint firstItem="wW4-BW-keB" firstAttribute="trailing" secondItem="Q4t-0N-pv3" secondAttribute="trailing" constant="35" id="uVm-xe-Jsi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wW4-BW-keB"/>
+                    </view>
+                    <connections>
+                        <outlet property="spMessages" destination="uJG-d5-4w5" id="NNC-tW-FHZ"/>
+                        <segue destination="KfO-av-MyZ" kind="presentation" identifier="goToLogin" id="nrZ-tS-d72"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bzf-rc-fB4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-223.19999999999999" y="125.4872563718141"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="EaV-kH-SPG">
+            <objects>
+                <viewControllerPlaceholder id="KfO-av-MyZ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TX7-Au-HJU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="832" y="6"/>
+        </scene>
+    </scenes>
+</document>

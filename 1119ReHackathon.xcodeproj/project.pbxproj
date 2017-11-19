@@ -10,6 +10,13 @@
 		6CEE8E481FC15A100096935F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE8E471FC15A100096935F /* AppDelegate.swift */; };
 		6CEE8E4F1FC15A100096935F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CEE8E4E1FC15A100096935F /* Assets.xcassets */; };
 		6CEE8E521FC15A100096935F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CEE8E501FC15A100096935F /* LaunchScreen.storyboard */; };
+		6CEE8E5D1FC15D140096935F /* jwstoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CEE8E5C1FC15D140096935F /* jwstoryboard.storyboard */; };
+		6CEE8E5F1FC15D320096935F /* tableStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CEE8E5E1FC15D320096935F /* tableStoryboard.storyboard */; };
+		6CEE8E611FC15D530096935F /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE8E601FC15D530096935F /* SplashViewController.swift */; };
+		6CEE8E641FC15F4E0096935F /* AlarmItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE8E631FC15F4E0096935F /* AlarmItem.swift */; };
+		6CEE8E661FC15FEA0096935F /* Days.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE8E651FC15FEA0096935F /* Days.swift */; };
+		6CEE8E6A1FC160340096935F /* DataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE8E691FC160340096935F /* DataCenter.swift */; };
+		6CEE8E6C1FC161ED0096935F /* AlarmInfomation.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6CEE8E6B1FC161ED0096935F /* AlarmInfomation.plist */; };
 		F7CF453B0FDBD72417B2D5B6 /* Pods_1119ReHackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5816AA56EAA2BD47B0C3ECFA /* Pods_1119ReHackathon.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,6 +29,13 @@
 		6CEE8E4E1FC15A100096935F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6CEE8E511FC15A100096935F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6CEE8E531FC15A100096935F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CEE8E5C1FC15D140096935F /* jwstoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = jwstoryboard.storyboard; sourceTree = "<group>"; };
+		6CEE8E5E1FC15D320096935F /* tableStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = tableStoryboard.storyboard; sourceTree = "<group>"; };
+		6CEE8E601FC15D530096935F /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		6CEE8E631FC15F4E0096935F /* AlarmItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmItem.swift; sourceTree = "<group>"; };
+		6CEE8E651FC15FEA0096935F /* Days.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Days.swift; sourceTree = "<group>"; };
+		6CEE8E691FC160340096935F /* DataCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCenter.swift; sourceTree = "<group>"; };
+		6CEE8E6B1FC161ED0096935F /* AlarmInfomation.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AlarmInfomation.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +77,7 @@
 				6CEE8E5A1FC15ADF0096935F /* Sungdoo */,
 				6CEE8E501FC15A100096935F /* LaunchScreen.storyboard */,
 				6CEE8E531FC15A100096935F /* Info.plist */,
+				6CEE8E6B1FC161ED0096935F /* AlarmInfomation.plist */,
 				6CEE8E5B1FC15AED0096935F /* Kyuhan */,
 			);
 			path = 1119ReHackathon;
@@ -71,6 +86,11 @@
 		6CEE8E591FC15ABB0096935F /* Jaewook */ = {
 			isa = PBXGroup;
 			children = (
+				6CEE8E621FC15F410096935F /* Model */,
+				6CEE8E5C1FC15D140096935F /* jwstoryboard.storyboard */,
+				6CEE8E601FC15D530096935F /* SplashViewController.swift */,
+				6CEE8E691FC160340096935F /* DataCenter.swift */,
+				6CEE8E5E1FC15D320096935F /* tableStoryboard.storyboard */,
 			);
 			path = Jaewook;
 			sourceTree = "<group>";
@@ -87,6 +107,15 @@
 			children = (
 			);
 			path = Kyuhan;
+			sourceTree = "<group>";
+		};
+		6CEE8E621FC15F410096935F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6CEE8E631FC15F4E0096935F /* AlarmItem.swift */,
+				6CEE8E651FC15FEA0096935F /* Days.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		C718A703A94A03737A2E0B92 /* Pods */ = {
@@ -168,7 +197,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CEE8E5D1FC15D140096935F /* jwstoryboard.storyboard in Resources */,
 				6CEE8E521FC15A100096935F /* LaunchScreen.storyboard in Resources */,
+				6CEE8E6C1FC161ED0096935F /* AlarmInfomation.plist in Resources */,
+				6CEE8E5F1FC15D320096935F /* tableStoryboard.storyboard in Resources */,
 				6CEE8E4F1FC15A100096935F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,7 +276,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CEE8E641FC15F4E0096935F /* AlarmItem.swift in Sources */,
 				6CEE8E481FC15A100096935F /* AppDelegate.swift in Sources */,
+				6CEE8E6A1FC160340096935F /* DataCenter.swift in Sources */,
+				6CEE8E661FC15FEA0096935F /* Days.swift in Sources */,
+				6CEE8E611FC15D530096935F /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
