@@ -16,12 +16,19 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailtextField : UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    var isLogout: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(Auth.auth().currentUser?.email)
+        if !isLogout, Auth.auth().currentUser != nil{
         Auth.auth().addStateDidChangeListener { (user, error) in
             if user != nil{
                 self.performSegue(withIdentifier: "goToMain1", sender: nil)
             }
+        }
+            
         }
     }
 
@@ -39,6 +46,7 @@ class LoginViewController: UIViewController {
                     self.present(alert, animated: true, completion: nil)
                 }
                 else{
+                    self.isLogout = false
                     self.performSegue(withIdentifier: "goToMain1", sender: nil)
                     
                 }

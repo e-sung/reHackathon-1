@@ -37,30 +37,26 @@ class RepeatDaySetUpViewController: UIViewController{
         nextVC.alarmItem.repeatDays = newRepeatingDays
     }
     
-    private @IBAction func monToggle(_ sender:UIButton){
+    @IBAction private func monToggle(_ sender:UIButton){
         sender.toggle()
     }
 
-    private @IBAction func tuesdayToggle(_ sender:UIButton){
+    @IBAction private func tuesdayToggle(_ sender:UIButton){
         sender.toggle()
     }
-    private @IBAction func wedsdayToggle(_ sender:UIButton){
+    @IBAction private func wedsdayToggle(_ sender:UIButton){
         sender.toggle()
     }
-    private @IBAction func thirsdayToggle(_ sender:UIButton){
+    @IBAction private func thirsdayToggle(_ sender:UIButton){
         sender.toggle()
     }
-    private @IBAction func fridayToggle(_ sender:UIButton){
+    @IBAction private func fridayToggle(_ sender:UIButton){
         sender.toggle()
     }
-    private @IBAction func saterdayToggle(_ sender:UIButton){
+    @IBAction private func saterdayToggle(_ sender:UIButton){
         sender.toggle()
     }
-    private @IBAction func sundayToggle(_ sender:UIButton){
-        sender.toggle()
-    }
-    
-    private @IBAction func mondayToggle(_ sender:UIButton){
+    @IBAction private func sundayToggle(_ sender:UIButton){
         sender.toggle()
     }
 

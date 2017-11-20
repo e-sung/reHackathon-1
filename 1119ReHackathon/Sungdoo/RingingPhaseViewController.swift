@@ -16,10 +16,12 @@ class RingingPhaseViewController: UIViewController {
     }
     
     @IBAction private func terminateButtonHandler(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "unwindToAlarmList", sender: nil)
+        player?.pause()
+        self.performSegue(withIdentifier: "unwindToAlarm", sender: nil)
         let url = URL(string: "http://192.168.0.20:3030")!
         URLSession.shared.dataTask(with: url) { (data, response, error) in
         }.resume()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -27,5 +29,6 @@ class RingingPhaseViewController: UIViewController {
         let playerItem = AVPlayerItem(url: url)
         player = AVPlayer(playerItem: playerItem) // TODO : Increase Volume continuously
         player?.play()
+        
     }
 }

@@ -7,9 +7,12 @@ target '1119ReHackathon' do
 
   # Pods for 1119ReHackathon
   pod 'SnapKit', '~> 4.0'
-pod 'Hero'
-pod 'LTMorphingLabel', '~> 0.5'  
-pod 'Firebase/Core'
-pod 'Firebase/Auth'
-pod 'Firebase/Storage'
+  pod 'Hero'
+  pod 'LTMorphingLabel', '~> 0.5'  
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
+  pod 'Firebase/Database'
+  pod 'Firebase/Auth'
+
 end
